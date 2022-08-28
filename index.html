@@ -14,13 +14,28 @@
         <form class="login-form">
           <div class="input-group success">
             <label for="email">Email</label>
-            <input type="email" name="email" required id="email" />
+            <input
+              pattern="[A-Za-z0-9._+-]+@[A-Za-z0-9 -]+\.[a-z]{2,}"
+              type="email"
+              name="email"
+              required
+              id="email"
+              title="Must be a valid email address"
+            />
             <span class="msg">Valid email</span>
           </div>
 
           <div class="input-group error">
             <label for="password">Password</label>
-            <input type="password" name="password" required id="password" />
+            <input
+              pattern="[a-zA-Z0-9]{8,}"
+              type="password"
+              name="password"
+              required
+              id="password"
+              title="Must be at least 8 characters"
+            />
+            <p class="input-hint">Must be at least 8 characters</p>
             <span class="msg">Valid password</span>
           </div>
 
